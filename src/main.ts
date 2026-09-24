@@ -1,4 +1,5 @@
 import './style.css'
+import { certificates } from './certificates-data'
 import autoDevChatPanel from '../content/airsfoundry/autodev/autodev-chat-panel.jpeg'
 import autoDevDashboard from '../content/airsfoundry/autodev/autodev-dashboard.jpeg'
 import autoDevDocs from '../content/airsfoundry/autodev/autodev-docs.jpeg'
@@ -51,29 +52,6 @@ const hardSkillGroups = [
 ]
 
 const peopleSkills = ['Consulting', 'Project Management', 'Research', 'Teaching', 'Teamwork', 'Team Leadership', 'Organizational Leadership', 'Leadership', 'Communication', 'Critical Thinking', 'Problem Solving', 'Decision-Making', 'Adaptability', 'Fast Learner']
-
-const certificates = [
-  { image: 'freecodecamp-data-analysis-with-python.jpg', title: 'Data Analysis with Python', issuer: 'freeCodeCamp' },
-  { image: 'freecodecamp-machine-learning-with-python.jpg', title: 'Machine Learning with Python', issuer: 'freeCodeCamp' },
-  { image: 'freecodecamp-responsive-web-design.jpg', title: 'Responsive Web Design', issuer: 'freeCodeCamp' },
-  { image: 'google-cloud-classify-images-with-tensorflow.jpg', title: 'Classify Images with TensorFlow on Google Cloud', issuer: 'Google Cloud' },
-  { image: 'google-cloud-generative-ai-fundamentals.jpg', title: 'Generative AI Fundamentals', issuer: 'Google Cloud' },
-  { image: 'google-cloud-transformer-models-and-bert.jpg', title: 'Transformer Models and BERT Model', issuer: 'Google Cloud' },
-  { image: 'google-cloud-attention-mechanism.jpg', title: 'Attention Mechanism', issuer: 'Google Cloud' },
-  { image: 'google-cloud-baseline-data-ml-ai.jpg', title: 'Baseline: Data, ML, AI', issuer: 'Google Cloud' },
-  { image: 'google-cloud-encoder-decoder-architecture.jpg', title: 'Encoder-Decoder Architecture', issuer: 'Google Cloud' },
-  { image: 'google-cloud-gemini-for-application-developers.jpg', title: 'Gemini for Application Developers', issuer: 'Google Cloud' },
-  { image: 'google-cloud-gemini-for-data-scientists-and-analysts.jpg', title: 'Gemini for Data Scientists and Analysts', issuer: 'Google Cloud' },
-  { image: 'google-cloud-innovating-with-generative-ai.jpg', title: 'Innovating with Google Cloud Artificial Intelligence', issuer: 'Google Cloud' },
-  { image: 'google-cloud-intro-to-ml-language-processing.jpg', title: 'Intro to ML: Language Processing', issuer: 'Google Cloud' },
-  { image: 'google-cloud-intro-to-ml-image-processing.jpg', title: 'Intro to ML: Image Processing', issuer: 'Google Cloud' },
-  { image: 'google-cloud-introduction-to-image-generation.jpg', title: 'Introduction to Image Generation', issuer: 'Google Cloud' },
-  { image: 'google-cloud-introduction-to-large-language-models.jpg', title: 'Introduction to Large Language Models', issuer: 'Google Cloud' },
-  { image: 'google-cloud-introduction-to-responsible-ai.jpg', title: 'Introduction to Responsible AI', issuer: 'Google Cloud' },
-  { image: 'aws-foundations-of-prompt-engineering.jpg', title: 'Foundations of Prompt Engineering', issuer: 'AWS Training and Certification' },
-  { image: 'aws-introduction-to-generative-ai-art-of-the-possible.jpg', title: 'Introduction to Generative AI: Art of the Possible', issuer: 'AWS Training and Certification' },
-  { image: 'coursera-google-cloud-introduction-to-generative-ai.jpg', title: 'Introduction to Generative AI', issuer: 'Google Cloud via Coursera' },
-]
 
 const projects: Project[] = [
   {
@@ -328,8 +306,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
 
     <section class="certificates-section section-wrap" id="certificates" aria-labelledby="certificates-title">
-      <div class="section-heading reveal"><div><p class="section-label"><span>05</span> LEARNING &amp; DEVELOPMENT</p><h2 id="certificates-title">Certificates<span class="heading-dot">.</span></h2></div><p class="section-aside">A record of courses and credentials across AI, machine learning, data, web development and prompt engineering. Select any image to view it larger.</p></div>
-      <div class="certificate-grid">${certificates.map((certificate, index) => `<article class="certificate-card reveal" style="--delay:${(index % 6) * 50}ms"><a class="certificate-image-link" href="/certificates/${certificate.image}" target="_blank" rel="noreferrer" aria-label="View ${certificate.title} certificate image"><img src="/certificates/${certificate.image}" alt="Certificate for ${certificate.title}, issued by ${certificate.issuer}" loading="lazy" /><span>VIEW CERTIFICATE <b aria-hidden="true">↗</b></span></a><div class="certificate-copy"><span class="certificate-index">${String(index + 1).padStart(2, '0')} / ${String(certificates.length).padStart(2, '0')}</span><h3>${certificate.title}</h3><p>${certificate.issuer}</p></div></article>`).join('')}</div>
+      <div class="section-heading reveal"><div><p class="section-label"><span>05</span> LEARNING &amp; DEVELOPMENT</p><h2 id="certificates-title">Certificates<span class="heading-dot">.</span></h2></div><p class="section-aside">A few highlights from courses across AI, machine learning and data. The full collection is in a separate gallery.</p></div>
+      <div class="certificate-grid certificate-highlights">${certificates.slice(0, 2).map((certificate, index) => `<article class="certificate-card reveal" style="--delay:${index * 50}ms"><a class="certificate-image-link" href="/certificates/${certificate.image}" target="_blank" rel="noreferrer" aria-label="View ${certificate.title} certificate image"><img src="/certificates/${certificate.image}" alt="Certificate for ${certificate.title}, issued by ${certificate.issuer}" loading="lazy" /><span>VIEW CERTIFICATE <b aria-hidden="true">↗</b></span></a><div class="certificate-copy"><span class="certificate-index">${String(index + 1).padStart(2, '0')} / ${String(certificates.length).padStart(2, '0')}</span><h3>${certificate.title}</h3><p>${certificate.issuer}</p></div></article>`).join('')}</div>
+      <a class="all-certificates-link" href="/certificates.html#all-certificates">Browse all ${certificates.length} certificates <span aria-hidden="true">↗</span></a>
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">

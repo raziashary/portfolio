@@ -8,7 +8,9 @@ flowchart LR
   Resume[public/resume.pdf] --> Skills[Skills and strengths section]
   LinkedInSkills[User-provided LinkedIn skills] --> Skills
   CertificatePDF[20-page combined certificate PDF] --> CertificateImages[20 optimized certificate images]
-  CertificateImages --> Certificates[Certificate gallery with names and issuers]
+  CertificateImages --> CertificateData[src/certificates-data.ts]
+  CertificateData --> CertificatePreview[Two portfolio certificate previews]
+  CertificateData --> CertificateGallery[certificates.html full thumbnail gallery]
   AIYou[Mercedes Mercury, Live Design Chatbot, ComfyUI] --> Work[Selected-work cards]
   Arcade[Arcade source code and demo clips] --> Work
   AutoDev[AutoDev screenshots and source] --> Work
@@ -21,7 +23,8 @@ flowchart LR
   Vite[Vite + TypeScript] --> Portfolio[Single-page portfolio]
   Career --> Portfolio
   Skills --> Portfolio
-  Certificates --> Portfolio
+  CertificatePreview --> Portfolio
+  CertificateGallery --> Static
   Work --> Portfolio
   Portfolio --> Static[Static production output without video files]
   Static --> Vercel[Vercel hosting]

@@ -2,7 +2,7 @@
 
 ## Objective
 
-Build a polished, responsive, single-page portfolio in this repository using Vite and TypeScript, with static output suitable for Vercel Hobby. Feature the five projects represented in `content/` plus one restrained AIRS Forge & Memory Infrastructure overview. Give both jobs a clear, expanded account of the supplied responsibilities and outcomes.
+Build a polished, responsive portfolio in this repository using Vite and TypeScript, with static output suitable for Vercel Hobby. Feature the five projects represented in `content/` plus one restrained AIRS Forge & Memory Infrastructure overview. Give both jobs a clear, expanded account of the supplied responsibilities and outcomes. Keep the main portfolio concise and put the complete certificate collection on its own page.
 
 ## Scope anchor
 
@@ -22,7 +22,7 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 | Arcade explains LivingAgent continuity, tiered memory, A2A, MCP, model/provider choice, gateway and deployment | Review rendered feature grid against `core-orchestrator` and the user's brief |
 | Skills section includes every distinct LinkedIn skill plus relevant resume skills, grouped into technical, people and language areas | Compare rendered groups with the supplied LinkedIn list and `public/resume.pdf`; duplicates appear once |
 | Site identity and hero reflect AI research and development, including neuroscience-informed memory and LLM/neural-network research | Review rendered header, hero, metadata and relevant skill entries |
-| Certificates section presents all 20 certificates as individually named and attributed images | Compare the rendered gallery against the 20-page supplied PDF; open sample images at full size |
+| Portfolio previews two certificates and links to a dedicated page with all 20 large, named and attributed certificate thumbnails | Follow “Browse all certificates”; inspect the 20-card gallery and open a thumbnail at full size |
 | Work signals name AutoDev and Arcade and use the corrected “A few signals from the work” spacing | Review the rendered four-card signal strip at wide and narrow widths |
 | Supplied demonstration links appear in matching case studies, resolve to public Drive previews and remain usable if embeds are blocked | Verify all nine Drive preview pages plus each case study's iframe and fallback link; MP4s must not appear in `dist/` |
 | Resume downloads from the contact section | Follow the resume link and confirm the bundled PDF opens |
@@ -57,5 +57,6 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 - [x] Expand AutoDev/Arcana and Arcade case studies into clean, responsive feature grids; inspect both at phone (375×812), tablet (768×1024), laptop (1366×768) and desktop (1920×1080). At all sizes the page and modal have no horizontal overflow; the feature grid changes from one column on phone to two columns at tablet and above.
 - [x] Build and smoke-check the final output; commit `45516a4` and push to `main`. Verified local and remote refs match, catalog files are present on GitHub, and no MP4 is in the remote tree.
 - [x] Add the complete, de-duplicated LinkedIn and resume skill set in a responsive Skills section; build, browser-check, commit and push.
-- [ ] Add all 20 certificates as individually named and attributed images; update research-led identity and work signals; build, browser-check, commit and push.
+- [x] Add all 20 certificates as individually named and attributed images; update research-led identity and work signals; build and browser-check at phone, tablet, laptop and desktop sizes.
+- [ ] Shorten the portfolio certificate area to two previews and move the full collection to a separate thumbnail gallery; build, browser-check, commit and push.
 - [x] Previous phase: commit expanded stories, push `main` to GitHub, and verify the remote ref has no MP4 blobs.
