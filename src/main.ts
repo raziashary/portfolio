@@ -24,6 +24,8 @@ type Project = {
   videos: VideoDemo[]
   gallery?: GalleryImage[]
   galleryTitle?: string
+  featureGroups?: { title: string; description: string }[]
+  catalogUrl?: string
 }
 
 type VideoDemo = { title: string; url: string; poster: string }
@@ -86,6 +88,14 @@ const projects: Project[] = [
     metricLabel: 'memory layers: episodic, semantic, procedural',
     tags: ['LivingAgent', 'A2A', 'MCP', 'Agent platform'],
     story: 'Arcade was co-created and deployed on GCP as a Docker stack. I worked across the systems that let its agents keep useful context, coordinate with one another and reach external tools. A shared API Gateway connected sessions and conversations to those services, while a multi-provider model layer let the product work across different LLMs.',
+    featureGroups: [
+      { title: 'Agents with continuity', description: 'LivingAgent gives each agent a defined identity and a continuity packet: a compact hand-off of relevant memory that helps preserve context without replaying an entire conversation.' },
+      { title: 'Memory across time', description: 'Episodic, semantic and procedural memory separate events, durable knowledge and learned approaches. Hot, warm and cold paths help select context at different levels of immediacy.' },
+      { title: 'Agents that collaborate', description: 'Google A2A support lets agents communicate and delegate work across agent boundaries, while the gateway provides shared session, conversation and streaming APIs.' },
+      { title: 'A common connection to tools', description: 'The MCP client connects to HTTP and stdio servers and exposes their tools, resources and prompts through a consistent integration surface.' },
+      { title: 'Choice of models and memory providers', description: 'A provider-switching LLM layer and a universal Memory MCP service keep model and storage choices replaceable. Circuit breakers help contain failures in memory-provider calls.' },
+      { title: 'Built to run as a product', description: 'Arcade brings these services together as a deployable product. I co-created the platform and deployed its Docker stack on Google Cloud Platform.' },
+    ],
     contributions: [
       '<strong>Memory-aware agents.</strong> Designed LivingAgent with persistent context and A2A support, so agents could coordinate and hand work to one another.',
       '<strong>Three kinds of memory.</strong> Built episodic memory for what happened, semantic memory for durable facts, and procedural memory for learned approaches. Hot, warm and cold paths plus a compact continuity packet helped carry relevant context forward.',
@@ -110,6 +120,15 @@ const projects: Project[] = [
     metricLabel: 'features documented across 17 catalog sections',
     tags: ['AI coding platform', 'Agent orchestration', 'Code intelligence'],
     story: 'AutoDev puts a hands-on coding assistant and an autonomous agent team in one desktop workspace. The feature catalog describes 1,264 behaviors across 17 sections and 204 subsections, from day-to-day coding and review to fleet coordination, repository insight and workflow automation. I’m now refactoring the platform into Arcana as my personal project.',
+    catalogUrl: '/autodev-feature-list/',
+    featureGroups: [
+      { title: 'Personal coding assistant', description: 'Work directly with an assistant for coding, review and delegation. Choose models, set project instructions, maintain plans and context, and reuse Skills across work.' },
+      { title: 'Supervisor-led agent team', description: 'A Supervisor routes work to specialist Workers such as backend, frontend and QA. Workers can report, message and coordinate, while QC reviews completed work.' },
+      { title: 'Planning and parallel work', description: 'Task boards and phased plans make assignments and status visible. Focused subagents can work on independent parts of a larger task.' },
+      { title: 'Repository workspace', description: 'Browse files, inspect source, review Git changes and history, create checkpoints, and isolate work in per-task worktrees.' },
+      { title: 'Extensions and repeatable workflows', description: 'GitHub and MCP integrations expose external tools. Hooks and Recipes add reusable actions and repeatable multi-step workflows.' },
+      { title: 'Code understanding and operations', description: 'Search a 2D repository graph to explore code relationships; the 3D Code City remains an early, unfinished view. Fleet status, usage, worker health and logs help make activity visible.' },
+    ],
     contributions: [
       '<strong>Two ways to work.</strong> Designed the Personal Assistant for direct coding, review and delegation, with model selection, project instructions, plans, persistent context and reusable Skills.',
       '<strong>A team with clear roles.</strong> Built the Supervisor-led fleet: specialist backend, frontend and QA Workers take tasks, report progress and message one another; a QC Agent reviews submitted work.',
@@ -292,6 +311,8 @@ document.querySelectorAll<HTMLButtonElement>('.project-open').forEach((button) =
       <h2 id="dialog-title">${project.title}<span class="heading-dot">.</span></h2>
       <img class="dialog-image ${project.imageClass ?? ''}" src="${project.image}" alt="${project.imageAlt}" />
       <p class="dialog-story">${project.story}</p>
+      ${project.catalogUrl ? `<a class="dialog-catalog-link" href="${project.catalogUrl}" target="_blank" rel="noreferrer">Explore the complete AutoDev feature catalog <span aria-hidden="true">↗</span></a>` : ''}
+      ${project.featureGroups?.length ? `<section class="dialog-features" aria-label="${project.title} platform features"><h3>Platform features</h3><div class="dialog-feature-grid">${project.featureGroups.map((feature, index) => `<article class="dialog-feature-card"><span>${String(index + 1).padStart(2, '0')}</span><h4>${feature.title}</h4><p>${feature.description}</p></article>`).join('')}</div></section>` : ''}
       <h3 class="dialog-subhead">My part in the work</h3>
       <ul class="dialog-contributions">${project.contributions.map((item) => `<li>${item}</li>`).join('')}</ul>
       <div class="dialog-tags">${project.tags.map((tag) => `<span>${tag}</span>`).join('')}</div>

@@ -8,6 +8,9 @@ flowchart LR
   AIYou[Mercedes Mercury, Live Design Chatbot, ComfyUI] --> Work[Selected-work cards]
   Arcade[Arcade source code and demo clips] --> Work
   AutoDev[AutoDev screenshots and source] --> Work
+  AutoDevCatalog[AutoDev feature catalog source] --> CatalogCopy[public/autodev-feature-list/index.html]
+  CatalogCopy --> AutoDevWork[AutoDev case study feature link]
+  Core --> ArcadeWork[Arcade case study feature groups]
   ForgeMemory[Four Pillars PDFs] --> ForgeCard[Baseline Forge and memory overview]
   ForgeCard --> Work
   Core[core-orchestrator repository] -. verified implementation details .-> Work
@@ -25,4 +28,5 @@ flowchart LR
 - This repository owns the portfolio app and lightweight video poster frames; AutoDev's eight supplied screenshots are imported directly from `content/airsfoundry/autodev/` into the static build.
 - Selected Work includes the five projects in `content/` and one combined Forge/memory case study. The user limited that case study to a baseline due to AIRS Foundry proprietary information; the detailed internal screenshots are not published.
 - User-provided Google Drive URLs populate matching demos; original MP4 files stay out of the static output. The authorized resume is served as `public/resume.pdf`.
+- The user-provided self-contained AutoDev feature catalog is published under `public/autodev-feature-list/` and linked from the AutoDev case study; the Arcade and AutoDev case-study feature grids are authored in `src/main.ts` and styled responsively in `src/style.css`.
 - Build output is static and is served by Vercel; no API or database is required by the initial scope.

@@ -9,7 +9,7 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 - Content and career timeline: [`content/contentfromrazi.md`](../../content/contentfromrazi.md)
 - Supplied project media: `content/aiandyou/` and `content/airsfoundry/`
 - Referenced engineering repositories: `C:\AIRS Foundry Repositories\core-orchestrator` and `C:\AIRS Foundry Repositories\autodev` (`sidecar-backup` branch)
-- AutoDev feature catalog: `C:\AIRS Foundry Repositories\autodev-feature-list\index.html`
+- AutoDev feature catalog source: `C:\AIRS Foundry Repositories\autodev-feature-list\index.html`; published copy: [`public/autodev-feature-list/index.html`](../../public/autodev-feature-list/index.html)
 
 ## Completion outcomes and proof
 
@@ -18,8 +18,8 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 | Portfolio communicates both roles, timeline, selected systems, and supplied project evidence accurately | Review rendered page against the content brief and referenced repositories |
 | Selected Work features all five projects represented in `content/` plus one baseline AIRS Forge & Memory Infrastructure overview | Inspect the six cards; verify five original projects and the restrained Forge/memory story |
 | AutoDev case study includes all eight supplied screenshots with accurate explanatory captions | Open the AutoDev case study and inspect the screenshot gallery |
-| AutoDev explains its major product areas using the supplied feature catalog and source branch | Review rendered case study against the 1,264-feature catalog (17 sections, 204 subsections) and `autodev`'s `sidecar-backup` source |
-| Arcade explains its agent, memory, MCP, model-routing and gateway work using the referenced backend | Review rendered case study against `core-orchestrator`, its memory MCP service, and the user's brief |
+| AutoDev explains its major product areas and links to the complete supplied feature catalog | Review rendered feature grid and open the bundled 1,264-feature catalog (17 sections, 204 subsections); compare against `autodev`'s `sidecar-backup` source |
+| Arcade explains LivingAgent continuity, tiered memory, A2A, MCP, model/provider choice, gateway and deployment | Review rendered feature grid against `core-orchestrator` and the user's brief |
 | Supplied demonstration links appear in matching case studies, resolve to public Drive previews and remain usable if embeds are blocked | Verify all nine Drive preview pages plus each case study's iframe and fallback link; MP4s must not appear in `dist/` |
 | Resume downloads from the contact section | Follow the resume link and confirm the bundled PDF opens |
 | Site works on desktop and narrow screens with accessible navigation and media | Run the local production build and inspect representative desktop/mobile browser views |
@@ -49,4 +49,7 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 - [x] Preserve the original local history under a backup ref; publish a clean root commit without the MP4 blobs while retaining ignored local files.
 - [x] Build and smoke-check the final output; verify poster-first video loading and final browser rendering.
 - [x] Expand and browser-review the AutoDev and Arcade capability summaries against their referenced source material.
-- [x] Commit the expanded stories, push `main` to GitHub, and verify the remote ref has no MP4 blobs.
+- [x] Bundle the supplied standalone AutoDev feature catalog and link it from the case study; the local preview returns HTTP 200 and serves the complete 580,486-byte HTML file.
+- [x] Expand AutoDev/Arcana and Arcade case studies into clean, responsive feature grids; inspect both at phone (375×812), tablet (768×1024), laptop (1366×768) and desktop (1920×1080). At all sizes the page and modal have no horizontal overflow; the feature grid changes from one column on phone to two columns at tablet and above.
+- [ ] Build and smoke-check the final output; commit and push the changes to `main`, then verify GitHub.
+- [x] Previous phase: commit expanded stories, push `main` to GitHub, and verify the remote ref has no MP4 blobs.
