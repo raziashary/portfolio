@@ -51,5 +51,5 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 - [x] Expand and browser-review the AutoDev and Arcade capability summaries against their referenced source material.
 - [x] Bundle the supplied standalone AutoDev feature catalog and link it from the case study; the local preview returns HTTP 200 and serves the complete 580,486-byte HTML file.
 - [x] Expand AutoDev/Arcana and Arcade case studies into clean, responsive feature grids; inspect both at phone (375×812), tablet (768×1024), laptop (1366×768) and desktop (1920×1080). At all sizes the page and modal have no horizontal overflow; the feature grid changes from one column on phone to two columns at tablet and above.
-- [ ] Build and smoke-check the final output; commit and push the changes to `main`, then verify GitHub.
+- [x] Build and smoke-check the final output; commit `45516a4` and push to `main`. Verified local and remote refs match, catalog files are present on GitHub, and no MP4 is in the remote tree.
 - [x] Previous phase: commit expanded stories, push `main` to GitHub, and verify the remote ref has no MP4 blobs.

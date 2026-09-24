@@ -4,7 +4,7 @@ Updated: 2026-09-24
 
 ## Current state
 
-- Repository root is `C:\portfolio`; `main` is a clean root commit `6e3b5e3` tracking `origin/main`. The full pre-cleanup local history is preserved at `backup/main-before-video-cleanup` (`4741ebe`).
+- Repository root is `C:\portfolio`; `main` tracks `origin/main` at `45516a4` (AutoDev/Arcade case-study expansion). The clean root commit is `6e3b5e3`; the full pre-cleanup local history is preserved at `backup/main-before-video-cleanup` (`4741ebe`).
 - The app is a Vite + TypeScript static page (`src/main.ts`, `src/style.css`) with output in `dist/`; no server or router is needed. The user will create the Vercel project themselves after the GitHub update.
 - `content/contentfromrazi.md` is the user-provided portfolio brief and was already modified before implementation; preserve that edit.
 - Selected Work features the five projects in `content/` (three AI&You, two AIRS Foundry) plus one combined AIRS Forge & Memory Infrastructure card at baseline only; Experience expands both job histories.
@@ -13,7 +13,7 @@ Updated: 2026-09-24
 - User supplied nine Google Drive demo links mapped to the five original work folders; all nine public preview pages returned 200 with titles matching their expected clips. Case studies show a matching poster first, load the Drive preview iframe on click, and keep direct-open fallbacks. User authorized copying `C:\Data Pribadi\Razi Ashary-resume.pdf` to `public/resume.pdf` for download.
 - Forge references in `C:\AIRS Foundry Repositories\Four Pillars` were reviewed. Its 28-page visualizer report shows internal operational/test screens, so public work uses a purpose-made high-level illustration and omits dataset details, screenshots and internal mechanics.
 - `.gitignore` covers supplied MP4s. All nine physical files remain in `content/` and match the ignore rule; neither current `main` nor `dist/` contains MP4s. The local backup ref preserves the old video-bearing history.
-- GitHub `origin/main` was pushed and verified at `6e3b5e3`; it has no MP4 entries. `vercel.json` selects the Vite framework, `npm run build`, and `dist` output. The repository is ready to connect to a Vercel project; no Vercel account/project was linked in this session.
+- GitHub `origin/main` was verified at `45516a4`; both catalog files are present and the remote tree has no MP4 entries. `vercel.json` selects the Vite framework, `npm run build`, and `dist` output. The user will import the repository into their own Vercel account.
 
 ## Authorities
 
@@ -34,4 +34,5 @@ Updated: 2026-09-24
 - `public/resume.pdf` and the Forge overview image both return HTTP 200 from the production preview. `dist/` contains no MP4 files; the nine ignored local source videos total about 1.09 GB and their Git history is only on the local backup branch.
 - `npm run build` passes after the latest changes. The production preview rendered the AutoDev case study with three poster previews; clicking one creates the corresponding Drive iframe. The `dist/` output has zero MP4s.
 - The production preview returns HTTP 200 for the site and resume; the resume is served as `application/pdf`. Vercel's official configuration docs support `framework`, `buildCommand`, and `outputDirectory` in `vercel.json`.
+- After the latest feature expansion, `npm run build` passes and `/autodev-feature-list/` returns HTTP 200 with the complete 580,486-byte catalog. Arcade and AutoDev dialogs were reviewed at requested phone, tablet, laptop and desktop viewport presets; each preset has no horizontal overflow, with one feature-grid column on phone and two at larger widths.
 - The user-requested browser preview remains open on port 4173. The user's edit to `content/contentfromrazi.md` and temporary `tmp/` folder remain unstaged and untouched.
