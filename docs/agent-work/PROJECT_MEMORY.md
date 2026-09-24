@@ -4,7 +4,7 @@ Updated: 2026-09-24
 
 ## Current state
 
-- Repository root is `C:\portfolio`; `main` tracks `origin/main` at `a1a9915` (responsive catalog release verification, following feature commit `45516a4`). The clean root commit is `6e3b5e3`; the full pre-cleanup local history is preserved at `backup/main-before-video-cleanup` (`4741ebe`).
+- Repository root is `C:\portfolio`; `main` tracks `origin/main` at `7ff9978` (dedicated certificate gallery, following the research-led identity and certificate imagery update). The clean root commit is `6e3b5e3`; the full pre-cleanup local history is preserved at `backup/main-before-video-cleanup` (`4741ebe`).
 - The app is a Vite + TypeScript static site (`src/main.ts`, `src/style.css`) with the portfolio at `/` and the certificate gallery at `/certificates.html`; both build into `dist/`. The user will create the Vercel project themselves after the GitHub update.
 - `content/contentfromrazi.md` is the user-provided portfolio brief and was already modified before implementation; preserve that edit.
 - Selected Work features the five projects in `content/` (three AI&You, two AIRS Foundry) plus one combined AIRS Forge & Memory Infrastructure card at baseline only; Experience expands both job histories.

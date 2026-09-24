@@ -58,5 +58,5 @@ Build a polished, responsive portfolio in this repository using Vite and TypeScr
 - [x] Build and smoke-check the final output; commit `45516a4` and push to `main`. Verified local and remote refs match, catalog files are present on GitHub, and no MP4 is in the remote tree.
 - [x] Add the complete, de-duplicated LinkedIn and resume skill set in a responsive Skills section; build, browser-check, commit and push.
 - [x] Add all 20 certificates as individually named and attributed images; update research-led identity and work signals; build and browser-check at phone, tablet, laptop and desktop sizes.
-- [ ] Shorten the portfolio certificate area to two previews and move the full collection to a separate thumbnail gallery; build, browser-check, commit and push.
+- [x] Shorten the portfolio certificate area to two previews and move the full collection to a separate thumbnail gallery; build, browser-check, commit and push `7ff9978` to `main`.
 - [x] Previous phase: commit expanded stories, push `main` to GitHub, and verify the remote ref has no MP4 blobs.
