@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">AIRS Forge and memory infrastructure</title>
+  <desc id="description">A high-level illustration of varied information feeding shared memory that provides grounded context to AI products.</desc>
+  <defs>
+    <linearGradient id="background" x1="100" y1="60" x2="1270" y2="790" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101c29"/>
+      <stop offset="1" stop-color="#20394a"/>
+    </linearGradient>
+    <linearGradient id="ice" x1="390" y1="250" x2="1010" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d8f2fc"/>
+      <stop offset="1" stop-color="#8dcce5"/>
+    </linearGradient>
+    <filter id="glow" x="300" y="175" width="800" height="500" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="820" rx="24" fill="url(#background)"/>
+  <path d="M80 142H1320M80 695H1320" stroke="#d8f2fc" stroke-opacity=".12"/>
+  <text x="88" y="108" fill="#d8f2fc" font-family="monospace" font-size="17" letter-spacing="4">AIRS FOUNDRY · FOUNDATIONAL SYSTEMS</text>
+  <circle cx="704" cy="423" r="205" fill="#91d5ee" fill-opacity=".2" filter="url(#glow)"/>
+  <g stroke="#a9def2" stroke-opacity=".65" stroke-width="2">
+    <path d="M305 337C420 337 455 383 545 405M305 516C420 516 455 470 545 447M862 426C965 426 1000 426 1090 426"/>
+    <circle cx="305" cy="337" r="5" fill="#d8f2fc"/><circle cx="305" cy="516" r="5" fill="#d8f2fc"/>
+    <circle cx="1090" cy="426" r="5" fill="#d8f2fc"/>
+  </g>
+  <g fill="#142534" stroke="#d8f2fc" stroke-opacity=".24">
+    <rect x="88" y="284" width="218" height="104" rx="14"/><rect x="88" y="464" width="218" height="104" rx="14"/>
+    <rect x="1090" y="364" width="220" height="124" rx="14"/>
+  </g>
+  <g fill="#d8f2fc" font-family="sans-serif">
+    <text x="120" y="328" font-size="14" letter-spacing="2" opacity=".64">INFORMATION</text>
+    <text x="120" y="359" font-size="23">Conversations · files</text>
+    <text x="120" y="508" font-size="14" letter-spacing="2" opacity=".64">INFORMATION</text>
+    <text x="120" y="539" font-size="23">Tools · activity</text>
+    <text x="1124" y="408" font-size="14" letter-spacing="2" opacity=".64">FOR APPLICATIONS</text>
+    <text x="1124" y="444" font-size="23">Grounded context</text>
+    <text x="1124" y="468" font-size="13" opacity=".66">AIRS products and agents</text>
+  </g>
+  <g>
+    <rect x="545" y="282" width="317" height="282" rx="22" fill="url(#ice)"/>
+    <circle cx="703" cy="365" r="31" stroke="#20394a" stroke-opacity=".75" stroke-width="2"/>
+    <path d="M703 342V388M680 365H726M687 349L719 381M719 349L687 381" stroke="#20394a" stroke-opacity=".78" stroke-width="2"/>
+    <text x="703" y="444" text-anchor="middle" fill="#142534" font-family="sans-serif" font-size="30" font-weight="600">Shared memory</text>
+    <text x="703" y="477" text-anchor="middle" fill="#20394a" font-family="sans-serif" font-size="17" opacity=".82">A foundation for useful context</text>
+    <text x="703" y="512" text-anchor="middle" fill="#20394a" font-family="monospace" font-size="12" letter-spacing="2" opacity=".72">AIRS FORGE</text>
+  </g>
+  <g fill="#d8f2fc" font-family="monospace" font-size="12" letter-spacing="1.5" opacity=".54">
+    <text x="88" y="654">A HIGH-LEVEL OVERVIEW · PRODUCT DETAILS INTENTIONALLY OMITTED</text>
+    <text x="1272" y="654" text-anchor="end">RA / 06</text>
+  </g>
+</svg>
