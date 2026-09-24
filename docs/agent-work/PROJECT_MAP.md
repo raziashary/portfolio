@@ -5,6 +5,10 @@
 ```mermaid
 flowchart LR
   Brief[content/contentfromrazi.md] --> Career[Expanded AI&You and AIRS experience]
+  Resume[public/resume.pdf] --> Skills[Skills and strengths section]
+  LinkedInSkills[User-provided LinkedIn skills] --> Skills
+  CertificatePDF[20-page combined certificate PDF] --> CertificateImages[20 optimized certificate images]
+  CertificateImages --> Certificates[Certificate gallery with names and issuers]
   AIYou[Mercedes Mercury, Live Design Chatbot, ComfyUI] --> Work[Selected-work cards]
   Arcade[Arcade source code and demo clips] --> Work
   AutoDev[AutoDev screenshots and source] --> Work
@@ -16,6 +20,8 @@ flowchart LR
   Core[core-orchestrator repository] -. verified implementation details .-> Work
   Vite[Vite + TypeScript] --> Portfolio[Single-page portfolio]
   Career --> Portfolio
+  Skills --> Portfolio
+  Certificates --> Portfolio
   Work --> Portfolio
   Portfolio --> Static[Static production output without video files]
   Static --> Vercel[Vercel hosting]
@@ -24,6 +30,7 @@ flowchart LR
 ## Ownership and flow
 
 - The brief owns the narrative and career timeline.
+- The user-provided LinkedIn list and the authorized resume own the skills inventory; duplicate entries are consolidated in the portfolio's Skills section.
 - The referenced AIRS Foundry repositories are evidence sources for technical product descriptions, not runtime dependencies.
 - This repository owns the portfolio app and lightweight video poster frames; AutoDev's eight supplied screenshots are imported directly from `content/airsfoundry/autodev/` into the static build.
 - Selected Work includes the five projects in `content/` and one combined Forge/memory case study. The user limited that case study to a baseline due to AIRS Foundry proprietary information; the detailed internal screenshots are not published.

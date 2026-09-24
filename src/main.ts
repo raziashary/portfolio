@@ -31,6 +31,50 @@ type Project = {
 type VideoDemo = { title: string; url: string; poster: string }
 type GalleryImage = { image: string; alt: string; title: string; description: string }
 
+const hardSkillGroups = [
+  {
+    title: 'Applied AI and machine learning',
+    skills: ['Artificial Intelligence (AI)', 'Machine Learning', 'Deep Learning', 'Reinforcement Learning', 'Neural Networks', 'Artificial Neural Networks', 'Deep Neural Networks (DNN)', 'Recurrent Neural Networks (RNN)', 'Convolutional Neural Networks (CNN)', 'Natural Language Processing (NLP)', 'Neuro-Linguistic Programming (NLP)', 'BERT and Transformer Models', 'Large Language Models (LLMs)', 'GPT', 'Google Gemini', 'Generative AI', 'Stable Diffusion', 'Computer Vision', 'Image Processing', 'Language Processing', 'Prompt Engineering', 'Chatbots', 'LoRA Fine-Tuning', 'Retrieval-Augmented Generation (RAG)', 'Semantic Retrieval and Vector Search', 'Neuroscience-Informed Memory Systems', 'LLM and Neural Network Research', 'TensorFlow', 'PyTorch', 'scikit-learn', 'LangChain'],
+  },
+  {
+    title: 'Architecture and product systems',
+    skills: ['System Architecture', 'Information System Design', 'Technical Architecture', 'Blueprinting', 'API Development', 'API Testing', 'Multi-Agent Systems', 'Agent-to-Agent (A2A)', 'Model Routing', 'Memory Systems', 'MCP Server Development', 'Research and Development (R&D)', 'Data Structures'],
+  },
+  {
+    title: 'Programming, data and cloud',
+    skills: ['Python', 'Rust', 'TypeScript', 'JavaScript', 'SQL', 'HTML5', 'CSS', 'MATLAB', 'FastAPI', 'Flask', 'Tauri', 'React', 'Node.js', 'Jupyter', 'Pandas', 'Seaborn', 'Data Analysis', 'Big Data', 'PostgreSQL and pgvector', 'Apache AGE', 'Redis', 'Qdrant', 'Docker', 'Docker Compose', 'Google Cloud Platform (GCP)', 'Claude Code', 'Botpress'],
+  },
+  {
+    title: 'Design and domain knowledge',
+    skills: ['Web Development', 'Responsive Web Design', 'Figma', 'Augmented Reality (AR)', 'Geodesy', 'Global Navigation Satellite System (GNSS)', 'Hydrographic Survey', 'Cadastral Surveying', 'Construction'],
+  },
+]
+
+const peopleSkills = ['Consulting', 'Project Management', 'Research', 'Teaching', 'Teamwork', 'Team Leadership', 'Organizational Leadership', 'Leadership', 'Communication', 'Critical Thinking', 'Problem Solving', 'Decision-Making', 'Adaptability', 'Fast Learner']
+
+const certificates = [
+  { image: 'freecodecamp-data-analysis-with-python.jpg', title: 'Data Analysis with Python', issuer: 'freeCodeCamp' },
+  { image: 'freecodecamp-machine-learning-with-python.jpg', title: 'Machine Learning with Python', issuer: 'freeCodeCamp' },
+  { image: 'freecodecamp-responsive-web-design.jpg', title: 'Responsive Web Design', issuer: 'freeCodeCamp' },
+  { image: 'google-cloud-classify-images-with-tensorflow.jpg', title: 'Classify Images with TensorFlow on Google Cloud', issuer: 'Google Cloud' },
+  { image: 'google-cloud-generative-ai-fundamentals.jpg', title: 'Generative AI Fundamentals', issuer: 'Google Cloud' },
+  { image: 'google-cloud-transformer-models-and-bert.jpg', title: 'Transformer Models and BERT Model', issuer: 'Google Cloud' },
+  { image: 'google-cloud-attention-mechanism.jpg', title: 'Attention Mechanism', issuer: 'Google Cloud' },
+  { image: 'google-cloud-baseline-data-ml-ai.jpg', title: 'Baseline: Data, ML, AI', issuer: 'Google Cloud' },
+  { image: 'google-cloud-encoder-decoder-architecture.jpg', title: 'Encoder-Decoder Architecture', issuer: 'Google Cloud' },
+  { image: 'google-cloud-gemini-for-application-developers.jpg', title: 'Gemini for Application Developers', issuer: 'Google Cloud' },
+  { image: 'google-cloud-gemini-for-data-scientists-and-analysts.jpg', title: 'Gemini for Data Scientists and Analysts', issuer: 'Google Cloud' },
+  { image: 'google-cloud-innovating-with-generative-ai.jpg', title: 'Innovating with Google Cloud Artificial Intelligence', issuer: 'Google Cloud' },
+  { image: 'google-cloud-intro-to-ml-language-processing.jpg', title: 'Intro to ML: Language Processing', issuer: 'Google Cloud' },
+  { image: 'google-cloud-intro-to-ml-image-processing.jpg', title: 'Intro to ML: Image Processing', issuer: 'Google Cloud' },
+  { image: 'google-cloud-introduction-to-image-generation.jpg', title: 'Introduction to Image Generation', issuer: 'Google Cloud' },
+  { image: 'google-cloud-introduction-to-large-language-models.jpg', title: 'Introduction to Large Language Models', issuer: 'Google Cloud' },
+  { image: 'google-cloud-introduction-to-responsible-ai.jpg', title: 'Introduction to Responsible AI', issuer: 'Google Cloud' },
+  { image: 'aws-foundations-of-prompt-engineering.jpg', title: 'Foundations of Prompt Engineering', issuer: 'AWS Training and Certification' },
+  { image: 'aws-introduction-to-generative-ai-art-of-the-possible.jpg', title: 'Introduction to Generative AI: Art of the Possible', issuer: 'AWS Training and Certification' },
+  { image: 'coursera-google-cloud-introduction-to-generative-ai.jpg', title: 'Introduction to Generative AI', issuer: 'Google Cloud via Coursera' },
+]
+
 const projects: Project[] = [
   {
     number: '01',
@@ -191,10 +235,10 @@ const projectCards = projects.map((project) => `
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Razi Ashary, home"><span class="monogram">RA</span><span>RAZI ASHARY<span class="wordmark-sub">AI SYSTEMS & PRODUCT ENGINEERING</span></span></a>
+    <a class="wordmark" href="#top" aria-label="Razi Ashary, home"><span class="monogram">RA</span><span>RAZI ASHARY<span class="wordmark-sub">AI RESEARCHER &amp; DEVELOPER</span></span></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-      <a href="#work">Selected work</a><a href="#approach">Approach</a><a href="#career">Experience</a><a class="nav-cta" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+      <a href="#work">Selected work</a><a href="#approach">Approach</a><a href="#career">Experience</a><a href="#skills">Skills</a><a href="#certificates">Certificates</a><a class="nav-cta" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
@@ -202,25 +246,25 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-content">
-        <p class="hero-kicker"><span class="live-dot"></span> AI RESEARCHER · SYSTEMS BUILDER · PRODUCT THINKER</p>
+        <p class="hero-kicker"><span class="live-dot"></span> AI RESEARCHER · NEUROSCIENCE-INFORMED MEMORY · LLM RESEARCH</p>
         <h1 id="hero-title">Making AI<br /><span class="hero-line-two">work <em>in the world.</em></span></h1>
         <div class="hero-bottom">
-          <p class="hero-copy">I turn emerging AI into useful products — from a visitor’s first question to the memory systems behind a whole fleet of agents.</p>
+        <p class="hero-copy">I research how neural networks and language models work, then develop AI systems shaped by neuroscience-informed memory and real-world use.</p>
           <a class="round-link" href="#work" aria-label="Explore selected work"><span>SCROLL TO<br />EXPLORE</span><b aria-hidden="true">↓</b></a>
         </div>
       </div>
       <div class="hero-coordinate coordinate-left">AI&amp;YOU · FEB 2024 — MAR 2025</div>
       <div class="hero-coordinate coordinate-right">AIRS FOUNDRY · MAY — SEP 2025</div>
       <div class="hero-mark" aria-hidden="true"><span>R</span><span>A</span><i></i></div>
-      <div class="hero-index" aria-hidden="true">RA — 01 / 04</div>
+      <div class="hero-index" aria-hidden="true">RA — 01 / 06</div>
     </section>
 
     <section class="signal-strip" aria-label="Career highlights">
-      <div class="signal-intro">A few signals<br />from the work</div>
+      <div class="signal-intro"><span>A few signals</span><br /> <span>from the work</span></div>
       <div class="signal-item"><strong>2</strong><span>teams helped<br />from early code to product</span></div>
       <div class="signal-item"><strong>500<span class="signal-plus">K+</span></strong><span>questions handled<br />by a live client chatbot</span></div>
-      <div class="signal-item"><strong>14</strong><span>programming languages<br />parsed by Auto-Storage</span></div>
-      <div class="signal-item signal-note"><span class="signal-flower" aria-hidden="true">✳</span><span>Research-led.<br />Built for real people.</span></div>
+      <div class="signal-item signal-product"><strong>AutoDev → Arcana</strong><span>AI coding platform built by me, now in personal refactor</span></div>
+      <div class="signal-item signal-product"><strong>Arcade</strong><span>multi-agent platform co-created and deployed on GCP</span></div>
     </section>
 
     <section class="work-section section-wrap" id="work" aria-labelledby="work-title">
@@ -268,14 +312,34 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </article>
     </section>
 
+    <section class="skills-section section-wrap" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading reveal"><div><p class="section-label"><span>04</span> CAPABILITIES</p><h2 id="skills-title">Skills &amp; strengths<span class="heading-dot">.</span></h2></div><p class="section-aside">A broad toolkit shaped by applied AI, platform engineering, geospatial research and collaborative product delivery.</p></div>
+      <div class="skills-layout">
+        <section class="skills-panel hard-skills-panel reveal" aria-labelledby="hard-skills-title">
+          <header class="skills-panel-head"><span class="skills-panel-index">01 / TECHNICAL</span><h3 id="hard-skills-title">Hard skills</h3><p>Methods, tools and technical foundations used across my work.</p></header>
+          <div class="skill-groups">${hardSkillGroups.map((group, index) => `<section class="skill-group"><h4><span>${String(index + 1).padStart(2, '0')}</span>${group.title}</h4><ul class="skill-list">${group.skills.map((skill) => `<li>${skill}</li>`).join('')}</ul></section>`).join('')}</div>
+        </section>
+        <aside class="skills-panel people-skills-panel reveal" aria-labelledby="people-skills-title">
+          <header class="skills-panel-head"><span class="skills-panel-index">02 / PEOPLE &amp; PRACTICE</span><h3 id="people-skills-title">Soft skills</h3><p>How I approach research, decisions and shared delivery.</p></header>
+          <ul class="skill-list people-skill-list">${peopleSkills.map((skill) => `<li>${skill}</li>`).join('')}</ul>
+          <div class="language-skills"><h4>Languages</h4><p><strong>English</strong><span>EF SET C2 · Proficient</span></p><p><strong>Indonesian</strong></p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="certificates-section section-wrap" id="certificates" aria-labelledby="certificates-title">
+      <div class="section-heading reveal"><div><p class="section-label"><span>05</span> LEARNING &amp; DEVELOPMENT</p><h2 id="certificates-title">Certificates<span class="heading-dot">.</span></h2></div><p class="section-aside">A record of courses and credentials across AI, machine learning, data, web development and prompt engineering. Select any image to view it larger.</p></div>
+      <div class="certificate-grid">${certificates.map((certificate, index) => `<article class="certificate-card reveal" style="--delay:${(index % 6) * 50}ms"><a class="certificate-image-link" href="/certificates/${certificate.image}" target="_blank" rel="noreferrer" aria-label="View ${certificate.title} certificate image"><img src="/certificates/${certificate.image}" alt="Certificate for ${certificate.title}, issued by ${certificate.issuer}" loading="lazy" /><span>VIEW CERTIFICATE <b aria-hidden="true">↗</b></span></a><div class="certificate-copy"><span class="certificate-index">${String(index + 1).padStart(2, '0')} / ${String(certificates.length).padStart(2, '0')}</span><h3>${certificate.title}</h3><p>${certificate.issuer}</p></div></article>`).join('')}</div>
+    </section>
+
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
       <div class="contact-orbit orbit-one" aria-hidden="true"></div><div class="contact-orbit orbit-two" aria-hidden="true"></div>
-      <div class="contact-content reveal"><p class="section-label"><span>04</span> NEXT CHAPTER</p><h2 id="contact-title">Good work starts<br />with <em>a conversation.</em></h2><p>I’m always interested in thoughtful ideas at the intersection of AI, engineering and people.</p><div class="contact-actions"><a class="contact-link" href="mailto:raziashary05@gmail.com?subject=Let%E2%80%99s%20talk%20about%20AI">Email me <span aria-hidden="true">↗</span></a><a class="linkedin-link" href="https://www.linkedin.com/in/razi-ashary/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a class="linkedin-link" href="/resume.pdf" download="Razi-Ashary-Resume.pdf">Download resume <span aria-hidden="true">↓</span></a></div></div>
+      <div class="contact-content reveal"><p class="section-label"><span>06</span> NEXT CHAPTER</p><h2 id="contact-title">Good work starts<br />with <em>a conversation.</em></h2><p>I’m always interested in thoughtful ideas at the intersection of AI, engineering and people.</p><div class="contact-actions"><a class="contact-link" href="mailto:raziashary05@gmail.com?subject=Let%E2%80%99s%20talk%20about%20AI">Email me <span aria-hidden="true">↗</span></a><a class="linkedin-link" href="https://www.linkedin.com/in/razi-ashary/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a class="linkedin-link" href="/resume.pdf" download="Razi-Ashary-Resume.pdf">Download resume <span aria-hidden="true">↓</span></a></div></div>
       <div class="contact-signature" aria-hidden="true">R<span>A</span></div>
     </section>
   </main>
 
-  <footer class="site-footer"><a class="footer-name" href="#top">RAZI ASHARY<span>AI SYSTEMS & PRODUCT ENGINEERING</span></a><span class="footer-credit">BUILT WITH CURIOSITY <i>✳</i> © 2026</span><a class="back-top" href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a></footer>
+  <footer class="site-footer"><a class="footer-name" href="#top">RAZI ASHARY<span>AI RESEARCHER &amp; DEVELOPER</span></a><span class="footer-credit">BUILT WITH CURIOSITY <i>✳</i> © 2026</span><a class="back-top" href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a></footer>
 
   <dialog class="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Close project details">×</button><div class="dialog-inner"></div></dialog>
 `

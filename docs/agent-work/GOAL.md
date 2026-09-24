@@ -20,6 +20,10 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 | AutoDev case study includes all eight supplied screenshots with accurate explanatory captions | Open the AutoDev case study and inspect the screenshot gallery |
 | AutoDev explains its major product areas and links to the complete supplied feature catalog | Review rendered feature grid and open the bundled 1,264-feature catalog (17 sections, 204 subsections); compare against `autodev`'s `sidecar-backup` source |
 | Arcade explains LivingAgent continuity, tiered memory, A2A, MCP, model/provider choice, gateway and deployment | Review rendered feature grid against `core-orchestrator` and the user's brief |
+| Skills section includes every distinct LinkedIn skill plus relevant resume skills, grouped into technical, people and language areas | Compare rendered groups with the supplied LinkedIn list and `public/resume.pdf`; duplicates appear once |
+| Site identity and hero reflect AI research and development, including neuroscience-informed memory and LLM/neural-network research | Review rendered header, hero, metadata and relevant skill entries |
+| Certificates section presents all 20 certificates as individually named and attributed images | Compare the rendered gallery against the 20-page supplied PDF; open sample images at full size |
+| Work signals name AutoDev and Arcade and use the corrected “A few signals from the work” spacing | Review the rendered four-card signal strip at wide and narrow widths |
 | Supplied demonstration links appear in matching case studies, resolve to public Drive previews and remain usable if embeds are blocked | Verify all nine Drive preview pages plus each case study's iframe and fallback link; MP4s must not appear in `dist/` |
 | Resume downloads from the contact section | Follow the resume link and confirm the bundled PDF opens |
 | Site works on desktop and narrow screens with accessible navigation and media | Run the local production build and inspect representative desktop/mobile browser views |
@@ -52,4 +56,6 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 - [x] Bundle the supplied standalone AutoDev feature catalog and link it from the case study; the local preview returns HTTP 200 and serves the complete 580,486-byte HTML file.
 - [x] Expand AutoDev/Arcana and Arcade case studies into clean, responsive feature grids; inspect both at phone (375×812), tablet (768×1024), laptop (1366×768) and desktop (1920×1080). At all sizes the page and modal have no horizontal overflow; the feature grid changes from one column on phone to two columns at tablet and above.
 - [x] Build and smoke-check the final output; commit `45516a4` and push to `main`. Verified local and remote refs match, catalog files are present on GitHub, and no MP4 is in the remote tree.
+- [x] Add the complete, de-duplicated LinkedIn and resume skill set in a responsive Skills section; build, browser-check, commit and push.
+- [ ] Add all 20 certificates as individually named and attributed images; update research-led identity and work signals; build, browser-check, commit and push.
 - [x] Previous phase: commit expanded stories, push `main` to GitHub, and verify the remote ref has no MP4 blobs.
