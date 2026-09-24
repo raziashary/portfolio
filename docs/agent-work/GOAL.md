@@ -29,7 +29,7 @@ Build a polished, responsive portfolio in this repository using Vite and TypeScr
 | Site works on desktop and narrow screens with accessible navigation and media | Run the local production build and inspect representative desktop/mobile browser views |
 | Project builds as a static Vercel-ready app without server dependencies | `npm run build`; inspect generated output and deployment config |
 | Main route starts and responds through the normal development/preview entry point | Run local preview and verify HTTP response and browser rendering |
-| The user can inspect the finished site in the app | Keep the requested production preview open at `http://127.0.0.1:4173/` and verify it responds |
+| The user can inspect the finished site in the app | Open the production preview, verify the rendered pages and key sections, then stop the preview when requested |
 
 ## Decisions and constraints
 
@@ -59,4 +59,5 @@ Build a polished, responsive portfolio in this repository using Vite and TypeScr
 - [x] Add the complete, de-duplicated LinkedIn and resume skill set in a responsive Skills section; build, browser-check, commit and push.
 - [x] Add all 20 certificates as individually named and attributed images; update research-led identity and work signals; build and browser-check at phone, tablet, laptop and desktop sizes.
 - [x] Shorten the portfolio certificate area to two previews and move the full collection to a separate thumbnail gallery; build, browser-check, commit and push `7ff9978` to `main`.
+- [x] Re-audit the full site, verify local and remote `main` match and no videos are bundled, then stop the preview at the user's request and confirm port 4173 is free.
 - [x] Previous phase: commit expanded stories, push `main` to GitHub, and verify the remote ref has no MP4 blobs.
