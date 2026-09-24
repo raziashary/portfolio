@@ -25,7 +25,7 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 | Site works on desktop and narrow screens with accessible navigation and media | Run the local production build and inspect representative desktop/mobile browser views |
 | Project builds as a static Vercel-ready app without server dependencies | `npm run build`; inspect generated output and deployment config |
 | Main route starts and responds through the normal development/preview entry point | Run local preview and verify HTTP response and browser rendering |
-| No verification process remains running | Stop the preview process and confirm its listener has closed |
+| The user can inspect the finished site in the app | Keep the requested production preview open at `http://127.0.0.1:4173/` and verify it responds |
 
 ## Decisions and constraints
 
@@ -34,9 +34,9 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 - User supplied public Drive links for the five project folders (nine clips total); the app supports public Drive, YouTube, or direct MP4 URLs.
 - User authorized copying the supplied resume into the repository for public download.
 - Keep the app static and avoid paid services or server-side features.
-- Keep video assets outside the static deployment bundle. `.gitignore` now includes `content/**/*.mp4`, but existing videos are already tracked in the original commit.
+- Keep video assets outside the static deployment bundle and pushed Git history. `.gitignore` excludes `content/**/*.mp4`; the physical source clips remain local, linked through Google Drive.
 - Preserve the user's existing edit to the content brief.
-- User explicitly authorized pushing to `main` after the work is complete and verified.
+- User explicitly authorized publishing to `main`, including the clean-history work needed to exclude video blobs.
 
 ## Progress
 
@@ -46,7 +46,7 @@ Build a polished, responsive, single-page portfolio in this repository using Vit
 - [x] Add all five content projects, all eight AutoDev screenshots with captions and the baseline Forge/memory overview.
 - [x] Map all nine demos; verify the public Drive preview pages and embed/fallback links.
 - [x] Add downloadable resume; inspect desktop work cards, AutoDev gallery and Forge overview in browser. Earlier mobile navigation and responsive layout check passed; final CSS preserves single-column mobile cards and gallery.
-- [ ] Resolve already-tracked large videos before the first push; obtain authorization for any history rewrite.
+- [x] Preserve the original local history under a backup ref; publish a clean root commit without the MP4 blobs while retaining ignored local files.
 - [x] Build and smoke-check the final output; verify poster-first video loading and final browser rendering.
 - [x] Expand and browser-review the AutoDev and Arcade capability summaries against their referenced source material.
-- [ ] Commit the expanded stories; preserve the original video-bearing history locally, publish a clean `main` without MP4 blobs, and verify the remote result.
+- [x] Commit the expanded stories, push `main` to GitHub, and verify the remote ref has no MP4 blobs.
