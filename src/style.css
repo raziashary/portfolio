@@ -113,15 +113,18 @@ h1, h2, h3, p { margin-top: 0; }
 .approach-copy .section-label { color: #a1a199; }
 .approach-copy h2 { font-size: clamp(46px, 6vw, 82px); }
 .approach-copy h2 em, .contact-content h2 em { color: var(--acid); font-style: normal; }
-.approach-lead { max-width: 345px; margin: 27px 0 25px; color: #aaa9a0; font-size: 13px; line-height: 1.85; }
+.approach-lead { max-width: 375px; margin: 27px 0 22px; color: #aaa9a0; font-size: 13px; line-height: 1.8; }
+.approach-research { max-width: 375px; margin: 0 0 25px; padding: 14px 0 15px; border-top: 1px solid rgba(255,255,255,.14); border-bottom: 1px solid rgba(255,255,255,.14); }
+.approach-research span { color: var(--acid); font: 8px var(--mono); letter-spacing: .1em; }
+.approach-research p { margin: 7px 0 0; color: #aaa9a0; font-size: 10px; line-height: 1.75; }
 .text-link { display: inline-flex; gap: 20px; align-items: center; padding-bottom: 7px; border-bottom: 1px solid rgba(183,227,245,.5); color: var(--acid); font-size: 11px; }
 .text-link span { transition: transform .2s; }
 .text-link:hover span { transform: translate(3px, 3px); }
 .approach-steps { padding-top: 11px; }
-.approach-step { display: grid; grid-template-columns: 35px 1fr 22px; gap: 15px; padding: 23px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+.approach-step { display: grid; grid-template-columns: 35px 1fr 22px; gap: 15px; padding: 17px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
 .step-number { color: var(--acid); font: 9px var(--mono); }
-.approach-step h3 { margin: 0 0 7px; font: 600 16px var(--head); letter-spacing: -.025em; }
-.approach-step p { max-width: 370px; margin: 0; color: #a5a59d; font-size: 11px; line-height: 1.75; }
+.approach-step h3 { margin: 0 0 5px; font: 600 15px var(--head); letter-spacing: -.025em; }
+.approach-step p { max-width: 430px; margin: 0; color: #a5a59d; font-size: 10.5px; line-height: 1.65; }
 .step-glyph { justify-self: end; color: var(--acid); font-size: 18px; }
 .approach-ornament { position: absolute; right: -3vw; bottom: -19vw; color: rgba(183,227,245,.045); font: 800 52vw/.7 var(--head); letter-spacing: -.15em; user-select: none; }
 .approach-ornament span { color: transparent; -webkit-text-stroke: 1px rgba(183,227,245,.06); }
@@ -369,6 +372,8 @@ h1, h2, h3, p { margin-top: 0; }
   .approach-inner { grid-template-columns: 1fr; gap: 39px; }
   .approach-copy h2 { font-size: 57px; }
   .approach-lead { margin: 20px 0; font-size: 12px; }
+  .approach-research { margin-bottom: 20px; }
+  .approach-research p { font-size: 9px; }
   .approach-step { grid-template-columns: 27px 1fr 19px; gap: 9px; padding: 18px 0; }
   .approach-step h3 { font-size: 14px; }
   .approach-step p { font-size: 10px; }
