@@ -108,6 +108,21 @@ h1, h2, h3, p { margin-top: 0; }
 .work-footnote { display: flex; align-items: center; gap: 9px; margin: 52px 0 0; color: #83847c; font: 8px var(--mono); letter-spacing: .11em; }
 .work-footnote .live-dot { width: 5px; height: 5px; background: #78bcd8; }
 
+.github-projects-section { padding-top: 98px; padding-bottom: 108px; background: #dceef4; }
+.github-project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.github-project-card { min-width: 0; min-height: 340px; padding: clamp(22px, 3vw, 38px); display: flex; flex-direction: column; background: rgba(255,255,255,.62); border: 1px solid rgba(23,43,58,.12); }
+.github-project-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.github-project-top .eyebrow { margin: 0; color: #71838d; font-size: 8px; line-height: 1.6; }
+.github-project-status { padding: 5px 8px; border: 1px solid rgba(23,43,58,.16); color: #647983; font: 7px/1.4 var(--mono); letter-spacing: .06em; }
+.github-project-card h3 { margin: 28px 0 12px; font: 600 clamp(27px, 3vw, 38px)/1.1 var(--head); letter-spacing: -.06em; }
+.github-project-summary { max-width: 530px; margin: 0 0 15px; color: #4f6069; font-size: 12px; line-height: 1.75; }
+.github-project-stage { max-width: 530px; margin: 0; color: #75828a; font-size: 10px; line-height: 1.7; }
+.github-project-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+.github-project-tags span { padding: 6px 9px; border: 1px solid rgba(23,43,58,.13); color: #65757d; font: 8px var(--mono); }
+.github-project-link { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: auto; padding-top: 24px; color: #1b455b; font-size: 11px; font-weight: 600; }
+.github-project-link span { color: #448ead; font-size: 16px; transition: transform .2s; }
+.github-project-link:hover span { transform: translate(3px, -3px); }
+
 .approach-section { padding: 116px 0 135px; position: relative; overflow: hidden; color: #f2f7fa; background: #1a2b39; }
 .approach-inner { display: grid; grid-template-columns: .92fr 1.08fr; gap: clamp(50px, 10vw, 150px); position: relative; z-index: 1; }
 .approach-copy .section-label { color: #a1a199; }
@@ -368,6 +383,11 @@ h1, h2, h3, p { margin-top: 0; }
   .metric small { max-width: 140px; line-height: 1.5; }
   .project-tags { max-width: 145px; }
   .work-footnote { margin-top: 35px; font-size: 7px; }
+  .github-projects-section { padding-top: 82px; padding-bottom: 86px; }
+  .github-project-grid { grid-template-columns: 1fr; gap: 13px; }
+  .github-project-card { min-height: 0; padding: 22px; }
+  .github-project-card h3 { margin-top: 22px; }
+  .github-project-link { padding-top: 22px; }
   .approach-section { padding: 82px 0 87px; }
   .approach-inner { grid-template-columns: 1fr; gap: 39px; }
   .approach-copy h2 { font-size: 57px; }

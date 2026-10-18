@@ -134,14 +134,14 @@ const projects: Project[] = [
   {
     number: '05',
     category: 'AIRS FOUNDRY · DEVELOPER TOOLS',
-    title: 'AutoDev → Arcana',
-    summary: 'An AI development platform I built around a coding assistant and a coordinated team of specialist agents.',
+    title: 'AutoDev',
+    summary: 'A model-flexible AI development platform built around a coding assistant and specialist agent fleet; its successor is now my personal Arcana project.',
     image: '/images/autodev-preview.jpg',
     imageAlt: 'Preview of AutoDev’s AI development environment and agent workflow',
     metric: '1,264',
     metricLabel: 'features documented across 17 catalog sections',
     tags: ['AI coding platform', 'Agent orchestration', 'Code intelligence'],
-    story: 'AutoDev puts a hands-on coding assistant and an autonomous agent team in one desktop workspace. The feature catalog describes 1,264 behaviors across 17 sections and 204 subsections, from day-to-day coding and review to fleet coordination, repository insight and workflow automation. I’m now refactoring the platform into Arcana as my personal project.',
+    story: 'AutoDev put a hands-on coding assistant and an autonomous agent team in one desktop workspace. Its feature catalog describes 1,264 behaviors across 17 sections and 204 subsections, from day-to-day coding and review to fleet coordination, repository insight and workflow automation. I’m carrying that work forward in Arcana as a separate personal project; see its current scope below.',
     catalogUrl: '/autodev-feature-list/',
     featureGroups: [
       { title: 'Personal coding assistant', description: 'Work directly with an assistant for coding, review and delegation. Choose models, set project instructions, maintain plans and context, and reuse Skills across work.' },
@@ -216,7 +216,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <a class="wordmark" href="#top" aria-label="Razi Ashary, home"><span class="monogram">RA</span><span>RAZI ASHARY<span class="wordmark-sub">AI RESEARCHER &amp; DEVELOPER</span></span></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-      <a href="#work">Selected work</a><a href="#approach">Approach</a><a href="#career">Experience</a><a href="#skills">Skills</a><a href="#certificates">Certificates</a><a class="nav-cta" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+      <a href="#work">Selected work</a><a href="#github-projects">GitHub</a><a href="#approach">Approach</a><a href="#career">Experience</a><a href="#skills">Skills</a><a href="#certificates">Certificates</a><a class="nav-cta" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
@@ -234,7 +234,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="hero-coordinate coordinate-left">AI&amp;YOU · FEB 2024 — MAR 2025</div>
       <div class="hero-coordinate coordinate-right">AIRS FOUNDRY · MAY — SEP 2025</div>
       <div class="hero-mark" aria-hidden="true"><span>R</span><span>A</span><i></i></div>
-      <div class="hero-index" aria-hidden="true">RA — 01 / 06</div>
+      <div class="hero-index" aria-hidden="true">RA — 01 / 07</div>
     </section>
 
     <section class="signal-strip" aria-label="Career highlights">
@@ -251,9 +251,31 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <p class="work-footnote"><span class="live-dot"></span> SYSTEMS THINKING, GROUNDED IN DELIVERY</p>
     </section>
 
+    <section class="github-projects-section section-wrap" id="github-projects" aria-labelledby="github-projects-title">
+      <div class="section-heading reveal"><div><p class="section-label"><span>02</span> PERSONAL PROJECTS · GITHUB</p><h2 id="github-projects-title">Ideas I’m building<span class="heading-dot">.</span></h2></div><p class="section-aside">Two projects exploring how AI development teams can work together—and how AI systems can stay grounded in evidence.</p></div>
+      <div class="github-project-grid">
+        <article class="github-project-card reveal">
+          <div class="github-project-top"><span class="eyebrow">DESKTOP WORKSPACE · MULTI-AGENT DEVELOPMENT</span><span class="github-project-status">ACTIVE RESTRUCTURING</span></div>
+          <h3>Arcana</h3>
+          <p class="github-project-summary">A personal desktop workspace for planning coding tasks, assigning work to agents, reviewing changes, and keeping the task board, memory, and code graph available to later turns.</p>
+          <p class="github-project-stage">Current focus: restructuring the desktop platform and completing its remaining validation work.</p>
+          <div class="github-project-tags"><span>Task planning</span><span>Agent teams</span><span>Persistent context</span></div>
+          <a class="github-project-link" href="https://github.com/raziashary/arcana" target="_blank" rel="noopener noreferrer">Explore Arcana on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="github-project-card reveal">
+          <div class="github-project-top"><span class="eyebrow">RESEARCH PROTOTYPE · EVIDENCE-FIRST AI</span><span class="github-project-status">FOUNDATION IN PROGRESS</span></div>
+          <h3>Palladion</h3>
+          <p class="github-project-summary">An agent harness exploring how to keep answers tied to authoritative evidence, recognize when evidence is insufficient, preserve case context, and challenge conclusions before release.</p>
+          <p class="github-project-stage">The current prototype focuses on evidence retrieval and validation; the full agent loop and generated-answer evaluation are future work.</p>
+          <div class="github-project-tags"><span>Evidence retrieval</span><span>Answer integrity</span><span>Context continuity</span></div>
+          <a class="github-project-link" href="https://github.com/raziashary/palladion" target="_blank" rel="noopener noreferrer">Explore Palladion on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
     <section class="approach-section" id="approach" aria-labelledby="approach-title">
       <div class="section-wrap approach-inner">
-        <div class="approach-copy reveal"><p class="section-label"><span>02</span> HOW I WORK</p><h2 id="approach-title">From vision<br />to verified<br /><em>outcomes.</em></h2><p class="approach-lead">AutoDev is a good example of my approach: make the destination clear, map the architecture and phased work, refine the plan with others, then prove each part as it is built.</p><div class="approach-research"><span>RESEARCH THREADS</span><p>Neuroscience-informed AI memory · context and retrieval · model efficiency and evaluation</p></div><a class="text-link" href="#career">Explore the work experience <span aria-hidden="true">↘</span></a></div>
+        <div class="approach-copy reveal"><p class="section-label"><span>03</span> HOW I WORK</p><h2 id="approach-title">From vision<br />to verified<br /><em>outcomes.</em></h2><p class="approach-lead">AutoDev is a good example of my approach: make the destination clear, map the architecture and phased work, refine the plan with others, then prove each part as it is built.</p><div class="approach-research"><span>RESEARCH THREADS</span><p>Neuroscience-informed AI memory · context and retrieval · model efficiency and evaluation</p></div><a class="text-link" href="#career">Explore the work experience <span aria-hidden="true">↘</span></a></div>
         <div class="approach-steps">
           <article class="approach-step reveal"><span class="step-number">01</span><div><h3>Picture the end state</h3><p>Get clear on the purpose, the people it serves, and what a meaningful result looks like before choosing a solution.</p></div><span class="step-glyph" aria-hidden="true">⌖</span></article>
           <article class="approach-step reveal"><span class="step-number">02</span><div><h3>Architect the route</h3><p>Turn the vision into a system map and phased, trackable work, with responsibilities clear before implementation starts.</p></div><span class="step-glyph" aria-hidden="true">⎔</span></article>
@@ -268,7 +290,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
 
     <section class="career-section section-wrap" id="career" aria-labelledby="career-title">
-      <div class="section-heading reveal"><div><p class="section-label"><span>03</span> EXPERIENCE</p><h2 id="career-title">Research, systems<br />and products<span class="heading-dot">.</span></h2></div><p class="section-aside">Two roles across applied AI and platform R&amp;D. Each one moved from research and system design to working products.</p></div>
+      <div class="section-heading reveal"><div><p class="section-label"><span>04</span> EXPERIENCE</p><h2 id="career-title">Research, systems<br />and products<span class="heading-dot">.</span></h2></div><p class="section-aside">Two roles across applied AI and platform R&amp;D. Each one moved from research and system design to working products.</p></div>
       <article class="career-role reveal">
         <header class="career-role-head"><span class="role-index">01</span><div><p class="role-period">FEBRUARY 2024 — MARCH 2025</p><h3>AI&amp;You</h3><p class="role-title">AI Researcher and Developer</p></div><span class="role-label">APPLIED AI · CLIENT PRODUCTS</span></header>
         <div class="role-intro"><p>I led research and built practical AI workflows for internal teams and client projects, from early feasibility through MVP and live deployment.</p><div class="role-chips"><span>8 MVPs</span><span>3 workflow architectures</span><span>Weekly applied research</span></div></div>
@@ -294,7 +316,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
 
     <section class="skills-section section-wrap" id="skills" aria-labelledby="skills-title">
-      <div class="section-heading reveal"><div><p class="section-label"><span>04</span> CAPABILITIES</p><h2 id="skills-title">Skills &amp; strengths<span class="heading-dot">.</span></h2></div><p class="section-aside">A broad toolkit shaped by applied AI, platform engineering, geospatial research and collaborative product delivery.</p></div>
+      <div class="section-heading reveal"><div><p class="section-label"><span>05</span> CAPABILITIES</p><h2 id="skills-title">Skills &amp; strengths<span class="heading-dot">.</span></h2></div><p class="section-aside">A broad toolkit shaped by applied AI, platform engineering, geospatial research and collaborative product delivery.</p></div>
       <div class="skills-layout">
         <section class="skills-panel hard-skills-panel reveal" aria-labelledby="hard-skills-title">
           <header class="skills-panel-head"><span class="skills-panel-index">01 / TECHNICAL</span><h3 id="hard-skills-title">Hard skills</h3><p>Methods, tools and technical foundations used across my work.</p></header>
@@ -309,14 +331,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
 
     <section class="certificates-section section-wrap" id="certificates" aria-labelledby="certificates-title">
-      <div class="section-heading reveal"><div><p class="section-label"><span>05</span> LEARNING &amp; DEVELOPMENT</p><h2 id="certificates-title">Certificates<span class="heading-dot">.</span></h2></div><p class="section-aside">A few highlights from courses across AI, machine learning and data. The full collection is in a separate gallery.</p></div>
+      <div class="section-heading reveal"><div><p class="section-label"><span>06</span> LEARNING &amp; DEVELOPMENT</p><h2 id="certificates-title">Certificates<span class="heading-dot">.</span></h2></div><p class="section-aside">A few highlights from courses across AI, machine learning and data. The full collection is in a separate gallery.</p></div>
       <div class="certificate-grid certificate-highlights">${certificates.slice(0, 2).map((certificate, index) => `<article class="certificate-card reveal" style="--delay:${index * 50}ms"><a class="certificate-image-link" href="/certificates/${certificate.image}" target="_blank" rel="noreferrer" aria-label="View ${certificate.title} certificate image"><img src="/certificates/${certificate.image}" alt="Certificate for ${certificate.title}, issued by ${certificate.issuer}" loading="lazy" /><span>VIEW CERTIFICATE <b aria-hidden="true">↗</b></span></a><div class="certificate-copy"><span class="certificate-index">${String(index + 1).padStart(2, '0')} / ${String(certificates.length).padStart(2, '0')}</span><h3>${certificate.title}</h3><p>${certificate.issuer}</p></div></article>`).join('')}</div>
       <a class="all-certificates-link" href="/certificates.html#all-certificates">Browse all ${certificates.length} certificates <span aria-hidden="true">↗</span></a>
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
       <div class="contact-orbit orbit-one" aria-hidden="true"></div><div class="contact-orbit orbit-two" aria-hidden="true"></div>
-      <div class="contact-content reveal"><p class="section-label"><span>06</span> NEXT CHAPTER</p><h2 id="contact-title">Good work starts<br />with <em>a conversation.</em></h2><p>I’m always interested in thoughtful ideas at the intersection of AI, engineering and people.</p><div class="contact-actions"><span class="contact-email" aria-label="Email address">raziashary05@gmail.com</span><a class="linkedin-link" href="https://www.linkedin.com/in/razi-ashary/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a class="linkedin-link" href="/resume.pdf" download="Razi-Ashary-Resume.pdf">Download resume <span aria-hidden="true">↓</span></a></div></div>
+      <div class="contact-content reveal"><p class="section-label"><span>07</span> NEXT CHAPTER</p><h2 id="contact-title">Good work starts<br />with <em>a conversation.</em></h2><p>I’m always interested in thoughtful ideas at the intersection of AI, engineering and people.</p><div class="contact-actions"><span class="contact-email" aria-label="Email address">raziashary05@gmail.com</span><a class="linkedin-link" href="https://www.linkedin.com/in/razi-ashary/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a class="linkedin-link" href="/resume.pdf" download="Razi-Ashary-Resume.pdf">Download resume <span aria-hidden="true">↓</span></a></div></div>
       <div class="contact-signature" aria-hidden="true">R<span>A</span></div>
     </section>
   </main>
