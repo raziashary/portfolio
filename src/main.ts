@@ -252,7 +252,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </section>
 
     <section class="github-projects-section section-wrap" id="github-projects" aria-labelledby="github-projects-title">
-      <div class="section-heading reveal"><div><p class="section-label"><span>02</span> PERSONAL PROJECTS · GITHUB</p><h2 id="github-projects-title">Ideas I’m building<span class="heading-dot">.</span></h2></div><p class="section-aside">Two projects exploring how AI development teams can work together—and how AI systems can stay grounded in evidence.</p></div>
+      <div class="section-heading reveal"><div><p class="section-label"><span>02</span> PERSONAL PROJECTS · GITHUB</p><h2 id="github-projects-title">Ideas I’m building<span class="heading-dot">.</span></h2></div><p class="section-aside">Three projects exploring coordinated AI development, evidence-grounded answers, and neuroscience-inspired agent memory.</p></div>
       <div class="github-project-grid">
         <article class="github-project-card reveal">
           <div class="github-project-top"><span class="eyebrow">DESKTOP WORKSPACE · MULTI-AGENT DEVELOPMENT</span><span class="github-project-status">ACTIVE RESTRUCTURING</span></div>
@@ -269,6 +269,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <p class="github-project-stage">The current prototype focuses on evidence retrieval and validation; the full agent loop and generated-answer evaluation are future work.</p>
           <div class="github-project-tags"><span>Evidence retrieval</span><span>Answer integrity</span><span>Context continuity</span></div>
           <a class="github-project-link" href="https://github.com/raziashary/palladion" target="_blank" rel="noopener noreferrer">Explore Palladion on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="github-project-card reveal">
+          <div class="github-project-top"><span class="eyebrow">NEUROSCIENCE-INSPIRED MEMORY · PYTHON PLAN</span><span class="github-project-status">RESEARCH DESIGN</span></div>
+          <h3>Norn</h3>
+          <p class="github-project-summary">A neuroscience-inspired research architecture and experimental protocol for agent memory, with evidence standards and experiments designed to test each proposed mechanism.</p>
+          <p class="github-project-stage">Python is the intended runtime. Current scope is the research design; implementation, datasets, and benchmark results are still ahead.</p>
+          <div class="github-project-tags"><span>Agent memory</span><span>Evidence governance</span><span>Experimental protocol</span></div>
+          <a class="github-project-link" href="https://github.com/raziashary/norn" target="_blank" rel="noopener noreferrer">Explore Norn on GitHub <span aria-hidden="true">↗</span></a>
         </article>
       </div>
     </section>
